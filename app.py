@@ -148,7 +148,7 @@ def calcular_rutas():
     print("Solicitud recibida")
     data = request.get_json()
     almacen = tuple(data['almacen'])
-    rutas = vrp_voraz(coord, almacen, pedidos, MAX_CARGA)
+    rutas = vrp_voraz(coord, almacen, pedidos, max_carga=MAX_CARGA)
 
     rutas_detalle = [{
         "ruta": ruta,
